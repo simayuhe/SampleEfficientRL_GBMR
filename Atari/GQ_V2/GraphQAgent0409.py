@@ -227,7 +227,7 @@ class GraphQAgent():
         embedding = self._get_state_embeddings([state])[0]
         #qs_by_g = self._predict_g(embedding)
         qs_by_g = self._predict_by_Graph(embedding)
-        print(qs_by_g)
+        #print(qs_by_g)
         # action = np.argmax(qs_by_g)
         # # Get action via epsilon-greedy
         # # if step%100000<10000: #self.training:# 先让代码跑一会儿，不进行用记忆进行决策，方便探索更广阔的空间
@@ -252,7 +252,7 @@ class GraphQAgent():
           action =np.random.choice(a_candidate)
           #value = Qs[action] # Paper uses maxQ, uncomment for on-policy updates
         value = qs_by_g[action]
-        print(action)
+        #print(action)
         self.trajectory_embeddings.append(embedding)
         self.trajectory_values.append(value)
         return action, value
