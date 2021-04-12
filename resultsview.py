@@ -1,27 +1,33 @@
 import numpy as np
 import matplotlib.pyplot as plt
 path = "/home/kpl/SEGBMRresults/"
-algorithm ='GQv2'
-riqi = "0410"
-envname = "Hero"
+algorithm1 ='GQv2'
+algorithm2 = 'GBMRv2'
+riqi1 = "0410"
+riqi2 = "0410_1"
+envname = "Alien"
 
 T=800
 a=50
-
 def average(M,a,T):
     t = M[0:T]
     for i in range(a):
         t=t+M[i:T+i]
     return t/a
 
-
-
 # tmux a -t 0
-name1=path+algorithm+riqi+envname+'-v4aver.npy'
-NEC1=np.load(name1)
-nec1 = average(NEC1,a,T)
-l1, = plt.plot(range(T),nec1,label=name1,color="r")
-plt.savefig(path+"Hero"+".png")
+name1=path+algorithm1+riqi1+envname+'-v4aver.npy'
+GQ1=np.load(name1)
+gq1 = average(GQ1,a,T)
+l1, = plt.plot(range(T),gq1,label=name1,color="r")
+
+name2 = path+algorithm2+riqi2+envname+'-v4aver.npy'
+GBMR1 = np.load(name2)
+gbmr1 = average(GBMR1,a,T)
+l2, = plt.plot(range(T),gbmr1,label=name1,color="m")
+
+plt.legend([l1,l2],[name1,name2],loc = 'lower right',fontsize ="xx-small")
+plt.savefig(path+envname+".png")
 plt.close()
 # # tmux a -t 0
 # name=path+algorithm+riqi+envname
