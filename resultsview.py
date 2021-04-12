@@ -3,9 +3,11 @@ import matplotlib.pyplot as plt
 path = "/home/kpl/SEGBMRresults/"
 algorithm1 ='GQv2'
 algorithm2 = 'GBMRv2'
+algorithm3 ='NEC'
 riqi1 = "0410"
 riqi2 = "0410_1"
-envname = "Alien"
+riqi3 = "0227-1c"
+envname = "MsPacman"
 
 T=800
 a=50
@@ -26,7 +28,12 @@ GBMR1 = np.load(name2)
 gbmr1 = average(GBMR1,a,T)
 l2, = plt.plot(range(T),gbmr1,label=name1,color="m")
 
-plt.legend([l1,l2],[name1,name2],loc = 'lower right',fontsize ="xx-small")
+name3 = path+algorithm3+riqi3+envname+'-v4aver.npy'
+NEC1 = np.load(name3)
+nec1 = average(NEC1,a,T)
+l3, = plt.plot(range(T),nec1,label=name3,color="g")
+
+plt.legend([l1,l2,l3],[algorithm1,algorithm2,algorithm3],loc = 'lower right',fontsize ="xx-small")
 plt.savefig(path+envname+".png")
 plt.close()
 # # tmux a -t 0
