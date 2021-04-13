@@ -9,7 +9,7 @@ from tqdm import tqdm
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
-from GraphQAgent0127 import GraphQAgent 
+from GraphQAgent0127_1 import GraphQAgent 
 
 
 def show_obs(obss,path,name):

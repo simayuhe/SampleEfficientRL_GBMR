@@ -54,6 +54,12 @@ GBMR 又多了一个关键点选择的函数
 Alien-v4, MsPacman-v4, Hero-v4, BankHeist-v4,Amidar-v4, MontezumaRevenge-v4，Bowling-v4, Frostbite-v4, Pong-v4
 
 
+现在出现的问题是GBMR2的结果并不动，要找到原因，先对比一下，如果我们用的是GBMR_V1的Q值改进版本会不会有提升
+
+
+
+
+
 # 对应到论文中的内容
 
 有四部分： 

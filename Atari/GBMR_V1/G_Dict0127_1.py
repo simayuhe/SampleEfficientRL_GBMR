@@ -169,14 +169,15 @@ class Graph_dict():
                 # 如果a点到b点，既可以用动作1 到达，也可以用动作2 到达，如何处理呢
                 if self.G.has_edge(start_node,end_node):
                     old_weight = self.G[start_node][end_node]["weight"]
-                    q_next = 0
-                    for edge_i in self.G.out_edges(end_node):
-                        if len(edge_i)==0:
-                            continue
-                        if q_next<self.G[edge_i[0]][edge_i[1]]["weight"]:
-                            q_next = self.G[edge_i[0]][edge_i[1]]["weight"]
-                    target_weight = values[i-1] + self.gamma*q_next
-                    new_weight = old_weight + self.eta * (target_weight-old_weight)# 这里用了现实交互的值更新已有的值
+                    # q_next = 0
+                    # for edge_i in self.G.out_edges(end_node):
+                    #     if len(edge_i)==0:
+                    #         continue
+                    #     if q_next<self.G[edge_i[0]][edge_i[1]]["weight"]:
+                    #         q_next = self.G[edge_i[0]][edge_i[1]]["weight"]
+                    # target_weight = values[i-1] + self.gamma*q_next
+                    # new_weight = old_weight + self.eta * (target_weight-old_weight)# 这里用了现实交互的值更新已有的值
+                    new_weight = old_weight + self.eta * (values[i-1]-old_weight)# 这里用了现实交互的值更新已有的值
                     self.G.add_edge(start_node,end_node,label=actions[i-1],weight=new_weight)
                 else:
                     self.G.add_edge(start_node,end_node,label=actions[i-1],weight=values[i-1])  

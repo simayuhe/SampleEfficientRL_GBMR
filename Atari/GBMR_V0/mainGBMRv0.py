@@ -102,7 +102,7 @@ def run_agent(args):
     terminal = False
     aver=np.zeros(int(training_iters/display_step)+50)# 这个数组太大复制太慢了
     maxeq=np.zeros(int(training_iters/display_step)+50)
-    savename=args.save_path+'GBMRv1_'+args.riqi+args.env
+    savename=args.save_path+'GBMRv0_'+args.riqi+args.env
     
     print(savename)
     iterationa=0
@@ -142,7 +142,7 @@ def run_agent(args):
                 #agent.G.ReconstructGraph(agent.keypoint.trjs2set())# 每display_step 重构一次
                 keypoints,keyobss =agent.keypoint.get_keypoint()
                 agent.G.ReconstructGraph(keypoints)
-                # show_obs(keyobss,args.save_path+'results/temp/',"GBIL_3_"+args.riqi+args.env+"_"+str(step)+"_")
+                #show_obs(keyobss,args.save_path+'results/temp/',"GBIL_3_"+args.riqi+args.env+"_"+str(step)+"_")
                 
             #     agent.G.GraphCluster(args.num_center) 
                 cluster_flag =False

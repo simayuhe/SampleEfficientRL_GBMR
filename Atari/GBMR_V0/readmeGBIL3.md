@@ -1,0 +1,2 @@
+tmux a -t 22
+CUDA_VISIBLE_DEVICES=7 python mainGBMRv0.py --env="Alien-v4" --training_iters=10000000 --memory_size=100000 --epsilon=0.1 --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=2 --riqi="0413b" --expert_memory_size=10 --save_path="/home/kpl/SEGBMRresults/"
