@@ -4,25 +4,25 @@ path = "/home/kpl/SEGBMRresults/"
 algorithm1 ='GQv2'
 algorithm2 = 'GBMRv2'
 algorithm3 ='NEC'
-algorithm4 = "GBIL_3_"
-algorithm5 = "GBMRv1"
-riqi1 = "0410"
-riqi2 = "0410_1"
-# riqi3 = "0227-1c"
+# algorithm4 = "GBIL_3_"
+# algorithm5 = "GBMRv1"
+riqi1 = "0410nq"
+riqi2 = "0410_nq"
+#riqi3 = "0227-1c"
 # riqi3 = "0326-1gbil"
-# riqi3 = "0410"
-riqi3= "0128-1b"
-riqi4 = "0227-2-50c"
-riqi5 = "_0410_3"
+riqi3 = "0410"
+# riqi3= "0326-1gbil"
+# riqi3 = "0227-1c"
+# riqi5 = "_0410_2"
 
-envname = "Alien"
+#envname = "Alien"
 # envname = "MsPacman"
 # envname = "Hero"
 # envname = "BankHeist"
 # envname = "Amidar"
 # envname = "Bowling"
 # envname = "Frostbite"
-# envname = "Pong"
+envname = "Pong"
 # envname = "MontezumaRevenge"
 #Alien-v4, MsPacman-v4, Hero-v4, BankHeist-v4,Amidar-v4, Bowling-v4, Frostbite-v4, Pong-v4,MontezumaRevenge-v4，
 T=800
@@ -49,20 +49,20 @@ NEC1 = np.load(name3)
 nec1 = average(NEC1,a,T)
 l3, = plt.plot(range(T),nec1,label=name3,color="g")
 
-name4 = path+algorithm4+riqi4+envname+'-v4aver.npy'
-GBIL1 = np.load(name4)
-gbil1 = average(GBIL1,a,T)
-l4, = plt.plot(range(T),gbil1,label=name4,color="b")
+# name4 = path+algorithm4+riqi4+envname+'-v4aver.npy'
+# GBIL1 = np.load(name4)
+# gbil1 = average(GBIL1,a,T)
+# l4, = plt.plot(range(T),gbil1,label=name4,color="b")
 
-name5 = path+algorithm5+riqi5+envname+'-v4aver.npy'
+# name5 = path+algorithm5+riqi5+envname+'-v4aver.npy'
 
-GBMRv1 = np.load(name5)
-print(GBMRv1[0:40])
-gbmrv1 = average(GBMRv1,a,T)
-l5, = plt.plot(range(T),gbmrv1,label=name5,color="c")
+# GBMRv1 = np.load(name5)
+# print(GBMRv1[0:40])
+# gbmrv1 = average(GBMRv1,a,T)
+# l5, = plt.plot(range(T),gbmrv1,label=name5,color="c")
 
-plt.legend([l1,l2,l3,l4,l5],[algorithm1,algorithm2,algorithm3,algorithm4,algorithm5],loc = 'lower right',fontsize ="xx-small")
-plt.savefig(path+envname+".png")
+plt.legend([l1,l2,l3],[algorithm1,algorithm2,algorithm3],loc = 'lower right',fontsize ="xx-small")
+plt.savefig(path+envname+"nq.png")
 plt.close()
 
 # # tmux a -t 0

@@ -191,14 +191,14 @@ class Graph_dict():
                     self.G.add_node(start_node)
                 if self.G.has_edge(start_node, end_node):# 看是否有边
                     old_weight = self.G[start_node][end_node]["weight"]
-                    q_next = 0
-                    for edge_i in self.G.out_edges(end_node):
-                        if len(edge_i) == 0:
-                            continue
-                        if q_next<self.G[edge_i[0]][edge_i[1]]["weight"]:
-                            q_next = self.G[edge_i[0]][edge_i[1]]["weight"]
-                    target_weight = returns[i] + self.gamma*q_next 
-                    new_weight = old_weight + self.eta*(target_weight-old_weight)
+                    # q_next = 0
+                    # for edge_i in self.G.out_edges(end_node):
+                    #     if len(edge_i) == 0:
+                    #         continue
+                    #     if q_next<self.G[edge_i[0]][edge_i[1]]["weight"]:
+                    #         q_next = self.G[edge_i[0]][edge_i[1]]["weight"]
+                    # target_weight = returns[i] + self.gamma*q_next 
+                    new_weight = old_weight + self.eta*(returns[i]-old_weight)
                     self.G.add_edge(start_node,end_node,label=actions[i],weight=new_weight,reward=returns[i])
                 else:
                     self.G.add_edge(start_node,end_node,label=actions[i],weight=returns[i],reward=returns[i])

@@ -8,10 +8,12 @@ CUDA_VISIBLE_DEVICES=4 python mainGBMRv1.py --env="MsPacman-v4" --training_iters
 Alien-v4, MsPacman-v4, Hero-v4, BankHeist-v4,Amidar-v4, MontezumaRevenge-v4，Bowling-v4, Frostbite-v4, Pong-v4
 1 tmux a -t 21 这里只替换了一个add by trj的时候的更新方式
 CUDA_VISIBLE_DEVICES=4 python mainGBMRv1.py --env="Alien-v4" --training_iters=40000000 --memory_size=1000000 --epsilon=0.1 --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=1 --riqi="0410_1" --expert_memory_size=10 --save_path="/home/kpl/SEGBMRresults/"
-
+结果很次基本持平，说明更新并不一定是问题的原因
 
 7python 中只改了动作执行
 CUDA_VISIBLE_DEVICES=1 python mainGBMRv1_1.py --env="Alien-v4" --training_iters=40000000 --memory_size=1000000 --epsilon=0.1 --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=1 --riqi="0410_2" --expert_memory_size=10 --save_path="/home/kpl/SEGBMRresults/"
+
+似乎有了明显提升，目前的结论是不能直接用随机，那么现在试试最后一个动作
 
 而且没有进入重构的过程，是不是那个参数调节过小的原因？
 
