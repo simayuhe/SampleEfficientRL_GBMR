@@ -9,8 +9,8 @@ algorithm3 ='NEC'
 riqi1 = "0410nq"
 riqi2 = "0410_nq"
 #riqi3 = "0227-1c"
-# riqi3 = "0326-1gbil"
-riqi3 = "0410"
+riqi3 = "0326-1gbil"
+# riqi3 = "0410"
 # riqi3= "0326-1gbil"
 # riqi3 = "0227-1c"
 # riqi5 = "_0410_2"
@@ -22,10 +22,10 @@ riqi3 = "0410"
 # envname = "Amidar"
 # envname = "Bowling"
 # envname = "Frostbite"
-envname = "Pong"
+# envname = "Pong"
 # envname = "MontezumaRevenge"
 #Alien-v4, MsPacman-v4, Hero-v4, BankHeist-v4,Amidar-v4, Bowling-v4, Frostbite-v4, Pong-v4,MontezumaRevenge-v4，
-T=800
+T=500
 a=10
 def average(M,a,T):
     t = M[0:T]

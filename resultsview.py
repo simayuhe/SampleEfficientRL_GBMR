@@ -26,7 +26,7 @@ envname = "Alien"
 # envname = "MontezumaRevenge"
 #Alien-v4, MsPacman-v4, Hero-v4, BankHeist-v4,Amidar-v4, Bowling-v4, Frostbite-v4, Pong-v4,MontezumaRevenge-v4，
 T=800
-a=10
+a=20
 def average(M,a,T):
     t = M[0:T]
     for i in range(a):
