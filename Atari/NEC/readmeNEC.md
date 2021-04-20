@@ -33,3 +33,30 @@ CUDA_VISIBLE_DEVICES=4 python mainNEC.py --env="Pong-v4" --training_iters=400000
 
 9
 CUDA_VISIBLE_DEVICES=3 python mainNEC.py --env="MontezumaRevenge-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --riqi="0410" --save_path="/home/kpl/SEGBMRresults/"
+
+
+2021年4月19日
+
+tmux a -t 0
+CUDA_VISIBLE_DEVICES=0 python mainNEC.py --env="Alien-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/NEC"
+
+tmux a -t 1
+CUDA_VISIBLE_DEVICES=1 python mainNEC.py --env="MsPacman-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/NEC"
+
+tmux a -t 2
+CUDA_VISIBLE_DEVICES=2 python mainNEC.py --env="Hero-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/NEC"
+
+tmux a -t 3
+CUDA_VISIBLE_DEVICES=3 python mainNEC.py --env="BankHeist-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/NEC"
+
+tmux a -t 4
+CUDA_VISIBLE_DEVICES=4 python mainNEC.py --env="Amidar-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/NEC"
+
+tmux a -t 5
+CUDA_VISIBLE_DEVICES=5 python mainNEC.py --env="Bowling-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/NEC"
+
+tmux a -t 6
+CUDA_VISIBLE_DEVICES=6 python mainNEC.py --env="Frostbite-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/NEC"
+
+tmux a -t 7
+CUDA_VISIBLE_DEVICES=7 python mainNEC.py --env="Pong-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/NEC"
