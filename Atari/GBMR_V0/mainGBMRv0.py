@@ -102,7 +102,7 @@ def run_agent(args):
     terminal = False
     aver=np.zeros(int(training_iters/display_step)+50)# 这个数组太大复制太慢了
     maxeq=np.zeros(int(training_iters/display_step)+50)
-    savename=args.save_path+'GBMRv0_'+args.riqi+args.env
+    savename=args.save_path+'/GBMRv0'+args.riqi+args.env
     
     print(savename)
     iterationa=0
