@@ -140,7 +140,8 @@ tmux a -t 23
 CUDA_VISIBLE_DEVICES=3 python mainGQ.py --env="Hero-v4" --training_iters=10000000 --memory_size=100000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=2 --riqi="0227-2-50b" --save_path='/home/kpl/'
 
 
-日期2021年4月20日
+日期 2021年4月20日
+ip: gbil
 
 tmux a -t 8
 CUDA_VISIBLE_DEVICES=0 python mainGQ.py --env="Alien-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=2 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/GQV0"
@@ -165,3 +166,30 @@ CUDA_VISIBLE_DEVICES=6 python mainGQ.py --env="Frostbite-v4" --training_iters=40
 
 tmux a -t 15
 CUDA_VISIBLE_DEVICES=7 python mainGQ.py --env="Pong-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=0.04 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/GQV0"
+
+日期 2021年4月20日
+IP： gbmr
+
+tmux a -t 8
+CUDA_VISIBLE_DEVICES=2 python mainGQv1.py --env="Alien-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=2 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/GQV1"
+
+tmux a -t 9
+CUDA_VISIBLE_DEVICES=3 python mainGQv1.py --env="MsPacman-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=2 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/GQV1"
+
+tmux a -t 10
+CUDA_VISIBLE_DEVICES=4 python mainGQv1.py --env="Hero-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=2 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/GQV1"
+
+tmux a -t 11
+CUDA_VISIBLE_DEVICES=5 python mainGQv1.py --env="BankHeist-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=0.04 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/GQV1"
+
+tmux a -t 12
+CUDA_VISIBLE_DEVICES=0 python mainGQv1.py --env="Amidar-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=2 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/GQV1"
+
+tmux a -t 13
+CUDA_VISIBLE_DEVICES=1 python mainGQv1.py --env="Bowling-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=0.04 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/GQV1"
+
+tmux a -t 14
+CUDA_VISIBLE_DEVICES=2 python mainGQv1.py --env="Frostbite-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=2 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/GQV1"
+
+tmux a -t 15
+CUDA_VISIBLE_DEVICES=3 python mainGQv1.py --env="Pong-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=0.04 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/GQV1"

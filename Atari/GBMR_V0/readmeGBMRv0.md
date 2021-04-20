@@ -1,3 +1,7 @@
+
+日期 2021年4月20日 
+ip : gbmr
+
 tmux a -t 0
 CUDA_VISIBLE_DEVICES=0 python mainGBMRv0.py --env="Alien-v4" --training_iters=40000000 --memory_size=500000 --epsilon=0.1 --display_step=10000 --learn_step=4 --num_neighbours=50 --dist_th=2 --riqi="0419" --expert_memory_size=10 --save_path="/home/kpl/SEGBMRresults/GBMRV0"
 
