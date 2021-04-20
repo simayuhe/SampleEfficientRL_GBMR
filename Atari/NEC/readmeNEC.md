@@ -36,6 +36,7 @@ CUDA_VISIBLE_DEVICES=3 python mainNEC.py --env="MontezumaRevenge-v4" --training_
 
 
 2021年4月19日
+gbil
 
 tmux a -t 0
 CUDA_VISIBLE_DEVICES=0 python mainNEC.py --env="Alien-v4" --training_iters=40000000 --memory_size=500000  --epsilon=0.1  --display_step=10000 --learn_step=4 --num_neighbours=50 --riqi="0419" --save_path="/home/kpl/SEGBMRresults/NEC"
